@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+var a="023465";
+var s=a.split("");
+var s1=[];
+s1.push(s[0]);
+for(var i=1;i<s.length;i++){
+if(s[i]%2==0&&s[i-1]%2==0)
+{
+
+s1.push("-"+s[i]);
+}
+else
+s1.push(s[i]);
+}
+document.getElementById("demo").innerHTML = s1.join("").toString();
+</script>
+
+</body>
+</html>
+

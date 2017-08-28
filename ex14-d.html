@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var m =
+[{'name':'Saurabh', 'age': 30, 'occupation': "TeamLeader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "TeamLeader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+var occ=[];
+var occ1=[];
+var arr=[];
+var obj={};
+var object={};
+var str="";
+for(var i=0;i<m.length;i++)
+{
+  occ[i]=m[i].occupation;
+}
+
+var s=new Set(occ);
+var j=0;
+var object={};
+for(var item of s){
+occ1[j++]=item;
+}
+
+for(var k=0;k<occ1.length;k++)
+{
+  arr=[];
+  for(var n=0;n<m.length;n++)
+  {
+   obj={};
+   if(occ1[k]==m[n].occupation)
+   {
+   obj={"name":m[n].name,"age":m[n].age}
+   arr.push(obj);
+   console.log("inner loop");
+   }
+  }
+  str=occ1[k];
+  object[str]=arr; 
+  console.log(occ1[k]);
+   console.log(arr);
+   console.log(str);
+  
+}
+
+document.getElementById("demo").innerHTML =object.Programmer;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+var d=new Date();
+var dd=d.getDate();
+var mm=d.getMonth();
+if(dd<10)
+dd="0"+dd;
+if(mm<10)
+mm="0"+mm;
+document.getElementById("demo").innerHTML = mm+"/"+dd+"/"+d.getFullYear();
+</script>
+
+</body>
+</html>
+

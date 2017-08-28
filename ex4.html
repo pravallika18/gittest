@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+var d=["As","Is","zoo","who","clock"];
+var s=d[0];
+var desc=d;
+for(var i=1;i<d.length;i++)
+{
+var s1=d[i-1];
+var s2=d[i];
+if(s1.slice(0,1)<s2.slice(0,1))
+{
+ desc[i]=d[i];
+}
+}
+document.getElementById("demo").innerHTML = d.sort()+"---"+d.sort().reverse()+"--desc:"+desc;
+</script>
+
+</body>
+</html>
+

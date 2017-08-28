@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var student = new Map([['David','80'],['Vinoth','77'],['Divya','88'],['Ishitha','95']]);
+var key=Array.from(student.keys());
+var s="";
+var value=Array.from(student.values());
+
+for(var i=0; i<key.length;i++)
+{
+ if(value[i]>=90 && value[i]<100){
+ s=key[i];
+ student.set(s,'A');
+ }
+ if(value[i]>=80 && value[i]<90){
+ s=key[i];
+ student.set(s,'B');
+ }
+ if(value[i]>=70 && value[i]<80){
+ s=key[i];
+ student.set(s,'A');
+ }
+
+}
+
+for(var j of student)
+{
+document.write(j+"<br/>");
+}
+
+document.getElementById("demo").innerHTML =k;
+</script>
+
+</body>
+</html>
+

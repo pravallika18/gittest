@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var m =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+var age=[];
+var s=[];
+for(var i=0;i<m.length;i++)
+{
+
+ age[i]=m[i].age;
+ age=age.sort();
+ }
+ for(var j=0;j<age.length;j++)
+ {
+  for(var k=0;k<m.length;k++)
+   {
+   		if(age[j]==m[k].age)
+         {
+         s.push(m[k]);
+         }
+  }
+ }
+  for(var n=0;n<s.length;n++)
+  {
+   document.write("name: "+s[n].name+"  age: "+s[n].age+"  occupation: "+s[n].occupation+"<br/>");
+  }
+
+
+document.getElementById("demo").innerHTML =age;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+var count=function(a,b)
+{
+ var s=a;
+ var k=s.split("");
+ var c=0;
+ for(var i=0;i<k.length;i++)
+ {
+  if(k[i]==b)
+  {
+   c++;
+  }
+ }
+ return c;
+}
+
+document.getElementById("demo").innerHTML =count("abcaaada","a");
+</script>
+
+</body>
+</html>
